@@ -75,3 +75,25 @@ bindMod("G", abrirGoogle)
 - Criar `bindModShift`, `bindModAlt`, etc. com `HotIf` globais
 - Integração com [VirtualDesktop.ahk](https://github.com/Ciantic/VirtualDesktop)
 - Script de emergência para encerrar/reiniciar o sistema de binds em caso de falha
+
+---
+
+## 🔧 Dependências e Inicialização Automática
+
+### 📦 Requisitos
+
+- [AutoHotkey v2](https://www.autohotkey.com/) instalado (necessário para rodar os scripts)
+    - Baixe e instale a versão mais recente em: https://www.autohotkey.com/download/
+
+### 🚀 Iniciar automaticamente com o Windows
+
+1. Pressione `Win + R` e digite `shell:startup` para abrir a pasta de inicialização.
+2. Crie um atalho para o arquivo `main.ahk` dentro dessa pasta:
+
+```
+"C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe" "C:\Caminho\para\main.ahk"
+```
+
+Se você compilou o script com o AutoHotkey, basta criar um atalho para o `main.exe` gerado.
+
+3. Pronto! O script será executado automaticamente ao iniciar o sistema.
