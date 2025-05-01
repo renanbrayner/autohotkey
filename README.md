@@ -31,7 +31,7 @@ getModKey() {
 }
 ```
 
-caso a tecla principal definida seja `CapsLock` o comportamento padrão da tecla será desativado e passado para o comando `Shift` + `Tab`
+caso a tecla principal definida seja `CapsLock` o comportamento padrão da tecla será desativado e passado para o comando `Shift` + `Tab` pelo código no arquivo `~/mod_capslogic.ahk`
 
 ---
 
@@ -42,14 +42,14 @@ caso a tecla principal definida seja `CapsLock` o comportamento padrão da tecla
 - `modKey + Q` → Fecha a janela ativa
 - `modKey + R` → Recarrega o script
 - `modKey + H/L` → Move janela para metade esquerda/direita da tela (usando Snap)
-- `Shift + Tab` → Alterna o CapsLock real (já que Caps foi desativado)
+- `Shift + Tab` → Alterna o CapsLock real (Caso a modKey seja CapsLock)
 
 ---
 
 ## 🆕 Como adicionar um novo atalho
 
 1. Crie um novo arquivo `.ahk` dentro da pasta `shortcuts/` (ou edite um existente)
-2. Use a função `bindMod(tecla, função)` como no exemplo abaixo:
+2. Use a função `bindMod(tecla, função)` ou outra função de bind como no exemplo abaixo:
 
 ```ahk
 abrirGoogle(*) {
