@@ -2,7 +2,7 @@
 
 #Include "config.ahk"
 #Include "mod_capslogic.ahk"
-#Include "./lib/lock_vomule.ahk"
+#Include "./lib/lock_volume.ahk"
 #Include "./shortcuts/apps.ahk"
 #Include "./shortcuts/windows.ahk"
 #Include "./shortcuts/browser.ahk"
