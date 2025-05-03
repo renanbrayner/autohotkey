@@ -12,6 +12,7 @@ AutoHotkey/
 ├── config.ahk             # Define tecla modKey (atualmente: CapsLock)
 ├── mod_capslogic.ahk      # Desativa o comportamento original do CapsLock
 ├── lib/
+│   ├── lock_volume.ahk    # Muta o sistema ao bloquear a tela
 │   └── bind.ahk           # Funções utilitárias como bindMod, bindRun, etc.
 └── shortcuts/
     ├── apps.ahk           # Atalhos para abrir aplicativos
@@ -60,6 +61,17 @@ bindMod("G", abrirGoogle)
 ```
 
 3. Importe o arquivo novo em `main.ahk` utilizando `#Include "/caminho/do/arquivo.ahk"`
+
+---
+
+## 🤖 Funcionalidades Automáticas
+
+O script AutoHotkey principal (`main.ahk`) também gerencia comportamentos automáticos do sistema, sem intervenção do usuário. As automações atuais incluem:
+
+- 🔇 **Mutar volume ao bloquear a tela**  
+  Sempre que o Windows for bloqueado (por exemplo, com `Win + L`), o áudio do sistema é automaticamente silenciado. O som é restaurado automaticamente ao desbloquear a sessão.
+
+> Esta funcionalidade é implementada em [`lib/lock_volume.ahk`](lib/lock_volume.ahk) e utiliza notificações de sessão do Windows via `WTSRegisterSessionNotification`.
 
 ---
 
